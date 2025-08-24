@@ -2,11 +2,10 @@ const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin");
 
 function solution() {
-  const lastNumber = Number(input);
+  const last = Number(input);
+  const result = Array.from({ length: last }, (_, i) => i + 1).join("\n");
 
-  for (let i = 1; i <= lastNumber; i++) {
-    console.log(i);
-  }
+  console.log(result);
 }
 
 solution();
